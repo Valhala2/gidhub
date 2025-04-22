@@ -8,7 +8,7 @@ API_KEY = "62cd1b130ee3aa244b201f453665bce0"
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 
-@patch("first.requests.get")
+@patch("test_first.requests.get")
 def test_get_weather_city_not_found(mock_get):
     mock_get.return_value.status_code = 404
     mock_get.return_value.json.return_value = {}
@@ -17,7 +17,7 @@ def test_get_weather_city_not_found(mock_get):
     assert result["ошибка"] == "Город не найден"
 
 
-@patch("first.requests.get")
+@patch("test_first.requests.get")
 def test_get_weather_invalid_key(mock_get):
     mock_get.return_value.status_code = 401
     mock_get.return_value.json.return_value = {}
