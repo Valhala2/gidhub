@@ -1,7 +1,7 @@
 import sys
 import os
 from unittest.mock import patch
-from first import get_weather
+from test_first import get_weather
 
 API_KEY = "62cd1b130ee3aa244b201f453665bce0"
 
